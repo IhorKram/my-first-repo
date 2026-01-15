@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-import urllib.request, sys
+import sys
+from urllib import request
+
 url = sys.argv[1]
-with urllib.request.urlopen(url) as response:
+with request.urlopen(url) as response:
     print(response.headers.get("X-Request-Id"))
